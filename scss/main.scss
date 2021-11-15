@@ -1,0 +1,375 @@
+@import 'mixin';
+@import 'normalize';
+@import 'font';
+@import 'variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+label{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+h2{
+    @include title(#2c4058, 'gotham-bolt');
+}
+h3{
+    @include title(white);
+}
+h4{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+button{
+    @include button;
+}
+#inst{
+    fill: white;
+}
+#facebook{
+    fill: white;
+}
+#twitter{
+    fill: white;
+}
+svg:hover{
+    fill: blue;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.rectangle{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.box{
+    padding: 0 5%;
+}
+.header{
+    height: 100vh;
+    &__menu{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        align-items: center;
+        transition: 0.2s;
+    }
+    &__logo{
+        fill: white;
+    }
+    &__radio{
+        display: none;
+    }
+    &__fakeRadio{
+        margin-right: 5px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: relative;
+    }
+    &__fakeRadio::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid white;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        opacity: 0;
+        transition: .5s;
+    }
+    &__radio:checked + .header__fakeRadio::before {
+        opacity: 1;
+    }
+}
+.wwd{
+    @include info;
+    display: flex;
+    justify-content: space-between;
+    margin: 180px 0 0 0;
+    &__text{
+        display: flex;
+        flex-direction: column;
+    }
+    &:nth-child(3){
+        padding-bottom: 140px;
+    }
+}
+
+.hInfo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -320px;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+    text-align: center;
+    &__title{
+        font-size: 80px;
+    }
+    &__text{
+        font-size: 18px;
+    }
+}
+.row{
+    padding: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 49%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.news{
+    background: url(../img/bg_news.png) ;
+    background-size: cover;
+    background-position: center;
+}
+.gallery{
+    text-align: center;
+    padding-bottom: 60px;
+    h3{
+        @include title(#2c4058);
+    }
+    &__box{
+        display: flex;
+    }
+    &__photo img{
+    width: 100%;
+    height: 49%;
+    padding: 5px;
+    }
+    &__button{
+        margin-top: 60px;
+        padding: 10px 40px;
+    }
+}
+.map{
+    width: 600px;
+
+}
+#map{
+    height: 700px;
+}
+.form{
+    position: relative;
+    top: -250px;
+    width: 40%;
+    height: 500px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    &__info{
+        background: url(../img/city.png)  no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        &__text{
+            font-family: 'gotham-book';
+            width: 45%;
+            & p{
+                padding: 20px 0px 20px 50px;
+            }
+        }
+        &__input{
+            width: 40%;
+            margin-top: 10px;
+            & input{
+                border: none;
+                border-bottom: 1px solid #2c4058;
+                padding: 10px 0;
+            }
+        }
+    }
+    h3{
+        padding: 100px 0 60px 0px;
+    }
+}
+.form__info__input button{
+        width: 150px;
+}
+.form__input:not(:first-child){
+    margin-top: 43px;
+}
+.form__input{
+    float: right;
+    margin-right: 80px;
+}
+.footer{
+    padding: 0% 5%;
+    h3{
+        color: #2c4058;
+    }
+    background: url(../img/Frame.png)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.footer__info{
+    top: -250px;
+    position: relative;
+    padding: 0 25%;
+}
+.copyright{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -250px;
+}
+//====================общие стили слайдеров на сайте =======================
+.slick-slider{
+    max-width: 100%;
+}
+.slider__item img{
+    width: 100%;
+    height: 100vh;
+}
+.slick-list{
+    height: 100%;
+    overflow: hidden;
+}
+.slick-track{
+    min-width: 0;
+    display: flex;
+}
+//=========== slider style #1 =============
+.single-item{
+    .slider{
+    position: relative;}
+}
+.single-item{
+    .slider_item{
+    width: 100%;}
+}
+.single-item{
+    .slick-dots{
+    position: absolute;
+    right: 3%;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;}
+}
+.single-item{
+    .slick-dots li{
+    list-style-type: none;
+    margin: 25px 0px;
+}}
+.single-item{
+    .slick-dots button{
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: solid 2px white;}
+}
+.single-item{
+    .slick-active button{
+    background-color: white;}
+}
+//=========== slider style #2 =============
+.single-item-second{
+    display: flex;
+    align-items: center;
+}
+.slider__item__second{
+    display: flex;
+    flex-direction: column;
+}
+.slider__info{
+    background-color: white;
+    width: 350px;
+    padding:10px 0 10px 10px;
+    &__text{
+        padding: 20px 0 40px 0;
+        font-size: 18px;
+    }
+}
+.profile{
+    display: flex;
+    &__text{
+        // text-transform: uppercase;
+        margin: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__text{
+        text-transform: uppercase;
+    }
+    &__data{
+        margin-top: 5px;
+        color:#55b7ff ;
+        font-size:14px ;
+    }
+}
+
+.slider__item__second img{
+    height: 350px;
+    width: 350px;
+}
+.single-item-second .slick-dots{
+    position: relative;
+    right: 48%;
+    padding: 758px 0 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.single-item-second .slick-dots li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+.single-item-second .slick-dots button{
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+.single-item-second{
+    .slick-active button{
+    background-color: white;
+}
+}
+.single-item-second{
+    .slick-arrow{
+        position: relative;
+        top: 50%;
+        z-index: 5;
+        font-size: 0;
+        height: 30px;
+        width: 100px;
+        border: 1px white solid;
+        border-radius: 50%;
+    }
+    .slick-prev{
+        left: 0;
+        background: url(../img/arrow.png)0 0 /50% no-repeat;
+        background-position: center;
+        transform: rotate(90deg);
+        margin-right: 120px;
+    }
+    .slick-next{
+        right: 0;
+        background: url(../img/arrow.png)0 0 /50% no-repeat;
+        background-position: center;
+        transform: rotate(-90deg);
+    }
+}

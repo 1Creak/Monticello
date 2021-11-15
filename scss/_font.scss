@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'gotham-bolt';
+    src: url('gotham-bolt'),
+    url('../fonts/gothambold1.ttf') format('ttf'),
+    url('../fonts/gothambold1.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'gotham-medium';
+    src: url('gotham-medium'),
+    url('../fonts/GothamMediumRegular.ttf') format('ttf'),
+    url('../fonts/gotham-medium-webfont.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'gotham-book';
+    src: url('gotham-book'),
+    url('../fonts/GothamBook.ttf') format('ttf'),
+    url('../fonts/GothamBook.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans-italic';
+    src: url('OpenSans-italic'),
+    url('../fonts/OpenSans-Italic.ttf') format('ttf'),
+    url('../fonts/OpenSans-Italic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'OpenSans-Regular';
+    src: url('OpenSans-Regular'),
+    url('../fonts/OpenSans-Regular.ttf') format('ttf'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
